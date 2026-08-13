@@ -46,7 +46,7 @@ export default function Home() {
       <section className="section about-split">
         <div className="container about-split-grid">
           <div className="about-image-wrap">
-            <Image src="/images/about-team.png" alt="A collaborative TCMS team in Lagos" fill sizes="(max-width: 900px) 100vw, 50vw" />
+            <Image src="/images/about-team-fresh.png" alt="A collaborative TCMS team in Lagos" fill sizes="(max-width: 900px) 100vw, 50vw" loading="eager" />
             <div className="image-caption"><span>Built for the realities of the market</span><span>Lagos, Nigeria</span></div>
           </div>
           <div className="about-copy">

@@ -17,10 +17,10 @@ function HeroPicture() {
   };
   const {
     props: { srcSet: desktop },
-  } = getImageProps({ ...common, src: "/images/hero-team-current.png", width: 2004, height: 785 });
+  } = getImageProps({ ...common, src: "/images/hero-team-latest.png", width: 2001, height: 786 });
   const {
     props: { srcSet: mobile, alt, ...rest },
-  } = getImageProps({ ...common, src: "/images/hero-team-mobile.png", width: 941, height: 1672 });
+  } = getImageProps({ ...common, src: "/images/hero-team-mobile-latest.png", width: 941, height: 1672 });
 
   return (
     <picture className="hero-picture">

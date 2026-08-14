@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { getImageProps } from "next/image";
 import Link from "next/link";
 import { ArrowRight, Check, MapPin } from "lucide-react";
 import { ButtonLink } from "@/components/ui/button-link";
@@ -7,12 +7,36 @@ import { ServiceGrid } from "@/components/sections/service-grid";
 import { CTASection } from "@/components/sections/cta-section";
 import { values } from "@/data/site";
 
+function HeroPicture() {
+  const common = {
+    alt: "A TCMS strategy team in a planning session",
+    sizes: "100vw",
+    quality: 90,
+    loading: "eager" as const,
+    fetchPriority: "high" as const,
+  };
+  const {
+    props: { srcSet: desktop },
+  } = getImageProps({ ...common, src: "/images/hero-team-current.png", width: 2004, height: 785 });
+  const {
+    props: { srcSet: mobile, alt, ...rest },
+  } = getImageProps({ ...common, src: "/images/hero-team-mobile.png", width: 941, height: 1672 });
+
+  return (
+    <picture className="hero-picture">
+      <source media="(min-width: 821px)" srcSet={desktop} />
+      <source media="(max-width: 820px)" srcSet={mobile} />
+      <img {...rest} alt={alt} />
+    </picture>
+  );
+}
+
 export default function Home() {
   return (
     <>
       <section className="home-hero">
         <div className="hero-background">
-          <Image src="/images/hero-team.png" alt="A TCMS strategy team in a planning session" fill priority sizes="100vw" />
+          <HeroPicture />
         </div>
         <div className="hero-overlay" />
         <div className="container hero-content">
@@ -46,7 +70,9 @@ export default function Home() {
       <section className="section about-split">
         <div className="container about-split-grid">
           <div className="about-image-wrap">
-            <Image src="/images/about-team-fresh.png" alt="A collaborative TCMS team in Lagos" fill sizes="(max-width: 900px) 100vw, 50vw" loading="eager" />
+            <div className="about-image-frame">
+              <Image src="/images/about-team-fresh.png" alt="A collaborative TCMS team in Lagos" fill quality={90} sizes="(max-width: 900px) 100vw, 50vw" />
+            </div>
             <div className="image-caption"><span>Built for the realities of the market</span><span>Lagos, Nigeria</span></div>
           </div>
           <div className="about-copy">

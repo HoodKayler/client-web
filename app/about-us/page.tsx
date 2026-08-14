@@ -24,7 +24,7 @@ export default function AboutPage() {
             <p>Our team combines industry experience, creative thinking, and data-informed insight. We understand the Nigerian market landscape, the dynamics of retail and distribution, and what it takes to win on the shelf and in consumers&apos; minds.</p>
           </div>
           <div className="story-image">
-            <Image src="/images/about-team.png" alt="TCMS team members gathered around a meeting table" fill sizes="(max-width: 900px) 100vw, 48vw" />
+            <Image src="/images/about-team-current.png" alt="TCMS team members gathered around a meeting table" fill quality={90} sizes="(max-width: 900px) 100vw, 48vw" />
           </div>
         </div>
       </section>
@@ -38,7 +38,7 @@ export default function AboutPage() {
 
       <section className="section leadership-section">
         <div className="container leadership-grid">
-          <div className="leader-image"><Image src="/images/udo-anya.png" alt="Udo Anya, Managing Director of TCMS Limited" fill sizes="(max-width: 700px) 90vw, 34vw" /></div>
+          <div className="leader-image"><Image src="/images/udo-anya.png" alt="Udo Anya, Managing Director of TCMS Limited" fill quality={90} sizes="(max-width: 700px) 100vw, 34vw" /></div>
           <div className="leader-copy">
             <p className="eyebrow">Leadership</p>
             <h2>Udo Anya</h2>

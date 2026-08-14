@@ -13,6 +13,7 @@ export function BrandMark({ light = false }: { light?: boolean }) {
         alt="TCMS Limited"
         width={2172}
         height={724}
+        quality={90}
         sizes={light ? "(max-width: 560px) 72vw, 300px" : "(max-width: 560px) 120px, 175px"}
         priority={!light}
         loading={light ? "eager" : undefined}

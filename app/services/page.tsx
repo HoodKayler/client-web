@@ -11,7 +11,11 @@ export const metadata: Metadata = {
   description: "Explore TCMS marketing consulting, trade marketing, consumer activation, territory development, distribution, research, and audit services.",
 };
 
-const serviceImages = ["/images/service-strategy.png", "/images/service-territory.png", "/images/service-research.png"];
+const serviceImages = [
+  "/images/service-strategy-current.png",
+  "/images/service-territory-current.png",
+  "/images/service-research-current.png",
+];
 
 export default function ServicesPage() {
   return (
@@ -44,7 +48,7 @@ export default function ServicesPage() {
           <div className="service-gallery">
             {serviceImages.map((src, index) => (
               <div className={`service-gallery-item item-${index + 1}`} key={src}>
-                <Image src={src} alt={["TCMS team developing a market strategy", "Market team reviewing territory data", "Research team interpreting market performance"][index]} fill sizes="(max-width: 800px) 100vw, 50vw" />
+                <Image src={src} alt={["TCMS team developing a market strategy", "Market team reviewing territory data", "Research team interpreting market performance"][index]} fill quality={90} sizes="(max-width: 800px) 100vw, 50vw" />
               </div>
             ))}
           </div>

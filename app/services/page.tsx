@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 };
 
 const serviceImages = [
-  "/images/service-strategy-current.png",
-  "/images/service-territory-current.png",
-  "/images/service-research-current.png",
+  "/images/service-strategy-latest.png",
+  "/images/service-territory-latest.png",
+  "/images/service-research-latest.png",
 ];
 
 export default function ServicesPage() {

@@ -149,6 +149,7 @@ img { max-width: 100%; }
 .about-image-frame { position: relative; aspect-ratio: 1999 / 787; }
 .about-image-frame img { object-fit: contain; object-position: center; }
 .image-caption { display: flex; justify-content: space-between; padding: 22px 25px; color: #eae4f1; background: rgba(30,13,61,.78); font-size: .73rem; letter-spacing: .04em; text-transform: uppercase; }
+.about-copy .eyebrow { color: var(--lime); }
 .about-copy .section-heading h2 { color: var(--white); }
 .about-copy > p { margin: 24px 0 0; color: #cfc8dc; font-size: 1.05rem; line-height: 1.72; }
 .check-list { display: grid; gap: 13px; margin: 30px 0 36px; padding: 0; list-style: none; }
@@ -208,10 +209,10 @@ img { max-width: 100%; }
 .service-detail:hover > p, .service-detail:hover li { color: #cdc6db; }
 .service-gallery-section { padding-top: 20px; background: var(--white); }
 .service-gallery-section .section-heading { margin-bottom: 50px; }
-.service-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
-.service-gallery-item { position: relative; aspect-ratio: 51 / 20; overflow: hidden; border-radius: 6px; }
+.service-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.service-gallery-item { position: relative; aspect-ratio: 1672 / 941; overflow: hidden; border: 1px solid rgba(49,19,96,.1); border-radius: 10px; background: #f1efeb; box-shadow: 0 18px 42px rgba(32,20,48,.08); }
 .service-gallery-item img { object-fit: contain; }
-.service-gallery .item-1 { grid-column: 1 / -1; }
+.service-gallery .item-3 { grid-column: 1 / -1; aspect-ratio: 2001 / 786; }
 
 /* Work */
 .work-section { background: var(--paper); }
@@ -370,7 +371,7 @@ img { max-width: 100%; }
   .hero-background, .hero-overlay { inset: 0; height: 100%; }
   .hero-background { overflow: hidden; background: var(--purple-dark); }
   .hero-background::before { content: none; }
-  .hero-background img { z-index: 1; object-fit: cover; object-position: 50% center; }
+  .hero-background img { z-index: 1; object-fit: contain; object-position: center top; }
   .hero-overlay {
     z-index: 2;
     background:
@@ -395,7 +396,7 @@ img { max-width: 100%; }
   .service-detail { grid-template-columns: 1fr 1fr; }
   .service-detail > p { grid-column: 1 / span 2; }
   .service-gallery { grid-template-columns: 1fr; }
-  .service-gallery .item-1 { grid-column: auto; }
+  .service-gallery .item-3 { grid-column: auto; }
   .work-grid { grid-template-columns: 1fr; }
   .mission-grid { gap: 40px; }
   .contact-details { max-width: 600px; }
